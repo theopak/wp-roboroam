@@ -28,6 +28,6 @@ build/buildinfo.properties
 build/config/buildinfo.properties
 
 # added by @theopak
-*/intermediate
-*/publish
-*.geany
+intermediate
+publish
+*.project

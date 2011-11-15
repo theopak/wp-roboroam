@@ -18,12 +18,16 @@ long_line_behaviour=2
 long_line_column=124
 
 [files]
-current_page=3
-FILE_NAME_0=355;Markdown;0;16;1;1;1;/home/pakt/git/wp-roboroam/README.md;0;4
-FILE_NAME_1=2973;Javascript;0;16;1;1;1;/home/pakt/git/wp-roboroam/wp-roboroam/js/script.js;0;4
-FILE_NAME_2=0;CSS;0;16;1;1;1;/home/pakt/git/wp-roboroam/wp-roboroam/css/style.css;0;4
-FILE_NAME_3=0;CSS;0;16;1;1;1;/home/pakt/git/wp-roboroam/wp-roboroam/css/template.css;0;4
-FILE_NAME_4=763;CSS;0;16;1;1;1;/home/pakt/git/wp-roboroam/wp-roboroam/css/custom.css;0;4
+current_page=0
+FILE_NAME_0=352;None;0;16;1;1;1;/home/pakt/git/wp-roboroam/.gitignore;0;4
+FILE_NAME_1=355;Markdown;0;16;1;1;1;/home/pakt/git/wp-roboroam/README.md;0;4
+FILE_NAME_2=7;PHP;0;16;1;1;1;/home/pakt/git/wp-roboroam/wp-roboroam/functions.php;0;4
+FILE_NAME_3=2973;Javascript;0;16;1;1;1;/home/pakt/git/wp-roboroam/wp-roboroam/js/script.js;0;4
+FILE_NAME_4=15979;CSS;0;16;1;1;1;/home/pakt/git/wp-roboroam/wp-roboroam/css/template.css;0;4
+FILE_NAME_5=1162;PHP;0;16;1;1;1;/home/pakt/git/wp-roboroam/wp-roboroam/header.php;0;4
+FILE_NAME_6=351;PHP;0;16;1;1;1;/home/pakt/git/wp-roboroam/wp-roboroam/footer.php;0;4
+FILE_NAME_7=707;PHP;0;16;1;1;1;/home/pakt/git/wp-roboroam/wp-roboroam/index.php;0;4
+FILE_NAME_8=186;None;0;16;1;1;1;/home/pakt/git/wp-roboroam/build/config/project.properties;0;4
 
 [VTE]
 last_dir=/home/pakt/Dropbox/classes_2011-fall/csci-1100_comp-sci/2011-10-13_ref-vars
