@@ -1,0 +1,20 @@
+/* the humans responsible & colophon */
+/* humanstxt.org */
+
+
+/* TUTHOR */
+	Developer: Theo Pak
+	Site: http://theopak.com
+	Twitter: theopak
+	Location: Troy, NY
+
+
+/* THANKS */
+	HTML5 Boilerplate, by Paul Irish and the community
+	http://html5boilerplate.com
+
+
+/* SITE */
+	Standards: HTML5, CSS3, PHP, MySQL
+	Components: Modernizr, jQuery
+	Software: Google Analytics, WordPress

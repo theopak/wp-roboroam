@@ -1,0 +1,872 @@
+/* ===== HTML5 Boilerplate (v2.0) normalizations ======================================================================== */
+/* HTML5 Boilerplate Normalization ====================================================================================== *
+ * v2.0 | Credit: Nicolas Gallagher, Jonathan Neal, Kroc Camen, and the H5BP dev community and team. (h5bp.com)           */
+
+/* --- HTML5 Display Definitions ---------------------------------------------------------------------------------------- */
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+audio:not([controls]) { display: none; }
+[hidden] { display: none; }
+
+/* --- Base Styles ------------------------------------------------------------------------------------------------------ */
+html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+body { margin: 0; font-size: 16px; line-height: 1.231; }
+body, button, input, select, textarea { font-family: sans-serif; color: #222; }
+::-moz-selection {background:#fe57a1;color:#fff;text-shadow:none;} /* no text-shadow in selection highlight:h5bp.com/i */
+::selection { background: #fe57a1; color: #fff; text-shadow: none; } /* These selection declarations have to be separate */
+
+/* --- Links ------------------------------------------------------------------------------------------------------------ */
+#main-wrapper a { color: #00e; }
+#main-wrapper a:visited { color: #551a8b; }
+#main-wrapper a:hover { color: #06e; }
+#main-wrapper a:focus { outline: thin dotted; }
+#main-wrapper a:hover, a:active { outline: 0; } /* Improve readability when focused, hovered in all browsers: h5bp.com/h */
+
+/* --- Typography ------------------------------------------------------------------------------------------------------- */
+abbr[title] { border-bottom: 1px dotted; }
+b, strong { font-weight: bold; }
+blockquote { margin: 1em 40px; }
+dfn { font-style: italic; }
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+ins { background: #ff9; color: #000; text-decoration: none; }
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+pre, code, kbd, samp { font-family: monospace, serif; _font-family: 'courier new', monospace; font-size: 1em; }
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; } 
+q { quotes: none; }
+q:before, q:after { content: ""; content: none; }
+small { font-size: 85%; }
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+/* --- Lists ------------------------------------------------------------------------------------------------------------ */
+ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
+dd { margin: 0 0 0 40px; }
+nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
+
+/* --- Embedded Content ------------------------------------------------------------------------------------------------- */
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; } /* (1) h5bp.com/d and (2) h5bp.com/e  */
+svg:not(:root) { overflow: hidden; } /* Correct overflow not hidden in IE9 */
+
+/* --- Figures ---------------------------------------------------------------------------------------------------------- */
+figure { margin: 0; }
+
+/* --- Forms ------------------------------------------------------------------------------------------------------------ */
+form { margin: 0; }
+fieldset { border: 0; margin: 0; padding: 0; }
+label { cursor: pointer; } /* Indicate that 'label' will shift focus to the associated form element */
+legend { border: 0; *margin-left: -7px; padding: 0; }
+button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+button, input { line-height: normal; *overflow: visible; }
+table button, table input { *overflow: auto; }
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; }
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; }
+input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+textarea { overflow: auto; vertical-align: top; resize: vertical; }
+input:valid, textarea:valid {  }
+input:invalid, textarea:invalid { background-color: #f0dddd; }
+
+/* --- Tables ----------------------------------------------------------------------------------------------------------- */
+table { border-collapse: collapse; border-spacing: 0; }
+td { vertical-align: top; }
+
+
+
+/* ==|== non-semantic helper classes ==================================================================================== */
+
+/* --- For image replacement -------------------------------------------------------------------------------------------- */
+.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; }
+.ir br { display: none; }
+
+/* --- Hide from both screenreaders and browsers: h5bp.com/u ------------------------------------------------------------ */
+.hidden { display: none !important; visibility: hidden; }
+
+/* --- Hide only visually, but have it available for screenreaders: h5bp.com/v ------------------------------------------ */
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+
+/* ---Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard --------- */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+
+/* --- Hide visually and from screenreaders, but maintain layout -------------------------------------------------------- */
+.invisible { visibility: hidden; }
+
+/* --- Contain floats: h5bp.com/q --------------------------------------------------------------------------------------- */
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+
+
+
+/* ==|== primary styles ================================================================================================= *
+ * Author: Theo Pak (theopak.com)                                                                                         */
+/* ====================================================================================================================== *
+ * === Robo Roam ======================================================================================================== *
+ * ====================================================================================================================== *
+ * Theme Name: Robo Roam                                                                                                  *
+ * Description: a wordpress theme                                                                                         *
+ * Version: 0.1                                                                                                           *
+ * Author: Theo Pak                                                                                                       *
+ * ====================================================================================================================== */
+
+
+/* --- global ----------------------------------------------------------------------------------------------------------- */
+body, select, input, textarea {
+	color: #333; /* #444 looks better than black: twitter.com/H_FJ/statuses/11800719859 */
+	font-family: Verdana,Arial,sans-serif; /* base font here, to apply evenly */
+}
+html, body { height: 100%; }
+body {
+	baackground: -webkit-gradient(linear, left top, left bottom, from(#CCC), to(#DDD)); /* webkit */
+	baackground: -moz-linear-gradient(bottom,#DDD,#CCC) fixed no-repeat 0 100%; /* firefox */
+	background: #FAFAFA url(../img/fafafa.jpg) repeat;
+}
+h1, h2, h3, h4, h5 {
+	margin: 0;
+	padding: 0;
+	font-family: Georgia,serif;
+	font-weight: bold;
+}
+a.button {
+	display: block;
+	margin: 15px auto;
+	padding: 5px 15px;
+	border: 1px solid #BAAC96;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	background: #E7D8BB url(../img/zurb_overlay.png) repeat-x center top;
+	text-decoration: none;
+	color: #333;
+	text-align: center;
+	text-shadow: 0 -1px 0 white;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px;
+	-webkit-transition: box-shadow .2s linear;
+	clear: none;
+}
+a.button:hover {
+	color: black;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 5px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 5px;
+}
+
+/* --- header ----------------------------------------------------------------------------------------------------------- */
+body>header {
+	margin: 0 auto 45px;
+	padding: 30px 0 40px;
+	min-width: 780px;
+	width: 100%;
+	height: 60px;
+	background: #f5f5f5 url(../img/circle-fade.png) no-repeat  bottom;
+	text-align: center;
+	z-index: 98;
+}
+body>header h1 {
+	display: block;
+	margin: 0 auto;
+	padding: 0;
+	min-width: 780px;
+	max-width: 960px;
+	height: 60px;
+	line-height: 1em;
+	text-align: left;
+}
+body>header h1 a, body>header h1 a:hover {
+	display: block;
+	margin: 0 auto;
+	padding: 0 10px;
+	height: 100%;
+}
+body>header nav form {
+	display: block;
+	margin: -1px auto;
+	padding: 0;
+	min-width: 780px;
+	max-width: 960px;
+	width: 100%;
+	text-align: right;
+}
+body>header nav form #s {
+	margin: 0 10px;
+	padding: 0 20px 0 0;
+	width: 130px;
+	line-height: 22px;
+	border: none;
+	background: transparent url(../img/silk_magnifier.png) no-repeat right center;
+	color: #999;
+	vertical-align: middle;
+}
+body>header nav form #searchsubmit {
+	display: none;
+}
+
+
+/* --- navigation ------------------------------------------------------------------------------------------------------- */
+body>header nav {
+	display: block;
+	margin: 15px auto 0;
+	padding: 0;
+	width: 100%;
+	height: 28px;
+	background: #E8D7BB;
+	border-top: 1px solid #BAAC96;
+	border-bottom: 1px solid #BAAC96;
+	line-height: 28px;
+	text-align: left;
+}
+body>header nav ul {
+	display: block;
+	margin: 0 auto 0;
+	padding: 0;
+	min-width: 780px;
+	max-width: 960px;
+	width: 100%;
+	list-style: none;
+}
+body>header nav ul li {
+	position: relative;
+	display: inline;
+	margin: 0;
+	padding: 0;
+	vertical-align: top;
+}
+body>header nav ul li a {
+	float: left;
+	display: block;
+	margin: 0 0 0 10px;
+	padding: 0 10px;
+	color: #333;
+	font: normal 1em/28px Arial;
+	text-align: left;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+body>header nav li.current_page_ancestor>a, body>header nav li.current_page_item a, body>header nav li a:active {
+	color: #607890;
+}
+#main nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	margin: 0;
+	padding: 0;
+	width: 159px;
+	height: 100%;
+	text-align: left;
+	background-color: #EFEFEF;
+	border-right: 1px solid #ababab;
+}
+#main nav ul {
+	display: block;
+	margin: 0;
+	padding: 0;
+	width: 159px;
+	height: 100%;
+}
+
+#main nav ul li {
+	display: block;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+#main nav ul li a, #main nav ul li a:visited {
+	display: block;
+	margin: 0 -1px 0 0;
+	padding: 15px 5px 15px 20px;
+	width: 135px;
+	border-bottom: 1px solid #CCC;
+	font: 1em/1em Arial,sans;
+	text-align: left;
+	text-decoration: none;
+	text-shadow: 0 1px 0 white;
+	color: #666;
+}
+#main nav ul li a:hover {
+	color: #06e;
+}
+#main nav ul li a.current , #main nav ul li a:active {
+	font-weight: bold;
+	text-shadow: 0 1px 0 white;
+	color: #333;
+	background: #E8D7BB url(../img/main-nav-arrow.png) no-repeat right;
+	-webkit-transition: color .1s linear;
+}
+
+
+/* --- main section ----------------------------------------------------------------------------------------------------- */
+#main-wrapper {
+	margin: 0 auto 0;
+	min-width: 780px;
+	max-width: 960px;
+	width: 100%;
+}
+#main {
+	margin: 0;
+	padding: 0 10px;
+	/*width: 100%;*/
+}
+#main header {
+	display: block;
+	margin: 0 0 .5em;
+	padding: 0;
+}
+#main header h1, #main header h2 {
+	display: block;
+	vertical-align: bottom;
+	clear: none;
+}
+#main header h1 {
+	margin: 110px 0 0;
+	padding: 0 20px 0 0;
+	font: bold 2.5em/1em Arial;
+	text-shadow: 0 -1px 0 #EEE;
+}
+#main header h2 {
+	margin: 0;
+	padding: 0;
+	font: italic 1em/1.5em Georgia;
+}
+#main #container {
+	position: relative;
+	display: block;
+	margin: 0 auto;
+	padding: 0;
+}
+#main #container #content {
+	display: block;
+	margin: 0 0 0 150px;
+	padding: 10px 15px 10px 25px;
+	min-height: 120px;
+	border: 1px solid #ababab;
+	background-color: #FFF;
+}
+#main-wrapper a.scrollup {
+	display: block;
+	float: right;
+	margin: 0;
+	padding: 5px 15px;
+	font: .8em/.8em Arial;
+	text-decoration: none;
+	color: #999;
+}
+#main-wrapper a.scrollup:hover {
+	color: #333;
+}
+#content-wrapper {
+	margin: 0;
+	padding: 0;
+}
+
+
+/* --- main section inner layout ---------------------------------------------------------------------------------------- */
+#container h3 {
+	display: block;
+	margin: 1.5em 0 .8em 0;
+	padding: 5px;
+	background-color: #E8D7BB;
+	font: bold 1.8em/1em Georgia;
+}
+#container h3:first-of-type {
+	margin-top: 0;
+}
+#container p {
+	margin: 0 0 .8em;
+	padding: 0;
+}
+.full {
+	display: block;
+	float: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	clear: both;
+}
+.half, .twothird, .third {
+	display: block;
+	float: left;
+	margin: 0 auto;
+	padding: 0;
+	width: 50%;
+	height: 100%;
+	clear: none;
+}
+.twothird {
+	width: 66%;
+}
+.third {
+	width: 33%;
+}
+.full h4, .half h4, .twothird h4, .third  h4 {
+	margin: .1em .9em 1em;
+	padding: 0 0 .3em;
+	border-bottom: 1px solid #666;
+	text-align: center;
+	overflow: hidden;
+}
+.full img, .half img, .twothird img, .third img {
+	display: block;
+	float: none;
+	margin: 0 auto;
+	padding: 4px;
+	border: 1px solid #CCC;
+	border-radius: 3px;
+	background-color: #EEE;
+}
+.half img, .third img {
+	padding: 0;
+	border: none;
+	border-radius: 0;
+}
+#container .full p, #container .half p, #container .twothird p, #container .third p {
+	margin: 0;
+	padding: 0 1em 1em;
+}
+section br {
+	display: block;
+	float: none;
+	clear: both;
+}
+
+
+/* --- footer ----------------------------------------------------------------------------------------------------------- */
+footer {
+	display: block;
+	margin: 3em auto 1em;
+	padding: 0 10px;
+	font: normal 1em/1em Georgia;
+	color: #666;
+}
+footer h1 {
+	display: block;
+	float: left;
+	margin: 0;
+	padding: 0;
+	color: #333;
+	font: bold 1.2em/1em Georgia;
+	clear: both;
+}
+footer h2 {
+	display: block;
+	float: left;
+	margin: 0;
+	padding: 0;
+	font: bold italic 1em/1em Georgia;
+	color: #999;
+	clear: both;
+}
+footer .vcard {
+	position: relative;
+	margin: 0 auto .5em;
+	padding: 11px 0 11px 80px;
+	height: 38px;
+	background: url(../img/logo_square.png) no-repeat left;
+	text-align: right;
+	line-height: 38px;
+}
+#main-wrapper footer .vcard a.button, #main-wrapper footer .vcard a.button:visited {
+	display: inline;
+	text-decoration: none;
+	color: #666;
+	clear: both;
+	vertical-align: middle;
+}
+#main-wrapper footer .vcard a.button:hover {
+	color: #06e;
+}
+footer small {
+	display: block;
+	margin: 0;
+	padding: 0 0 1em;
+	font: 9pt/10pt Arial;
+	text-align: justify;
+	clear: both;
+}
+#main-wrapper footer small a, #main-wrapper footer small a:visited {
+	text-decoration: none;
+	color: #666;
+}
+footer small:hover a {
+	border-bottom: 1px dotted;
+}
+footer small a:hover {
+	color: #333;
+}
+footer small em {
+	font-style: italic;
+}
+
+
+/* --- special ---------------------------------------------------------------------------------------------------------- */
+#main-wrapper img.loading {
+	display: block;
+	margin: 0 auto;
+	padding: 250px 0;
+	border: 0;
+}
+.reveal-modal-bg {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	background: rgba(0,0,0,.8);
+	z-index: 100;
+}
+.reveal-modal {
+	visibility: hidden;
+	position: fixed;
+	top: 100px;
+	left: 50%;
+	margin-left: -300px;
+	padding: 30px 40px 34px;
+	width: 520px;
+	border: 1px solid #666;
+	border-radius: 6px;
+	box-shadow: 0 0 10px rgba(0,0,0,.4);
+	background: #eee url(../img/reveal_modal-gloss.png) no-repeat -200px -80px;
+	z-index: 101;
+}
+.reveal-modal .close-reveal-modal {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 11px;
+	font: bold 22px/.5 inherit;
+	text-shadow: 0 -1px 1px rbga(0,0,0,.6);
+	color: #aaa;
+	cursor: pointer;
+	-webkit-transition: color .1s linear;
+}
+.reveal-modal .close-reveal-modal:hover {
+	color: #333;
+}
+#orbit {
+	width: 940px;
+	height: 240px;
+	background: transparent url(../img/loading.gif) no-repeat center center;
+	overflow: hidden;
+}
+#orbit>img, #orbit>div, #orbit>a { display: none; }
+.orbit-wrapper {
+	position: relative;
+	width: 940px;
+	height: 240px;
+}
+.orbit {
+	position: relative;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+.orbit>img, .orbit>a, .orbit>div {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+	border: none;
+	background: url(../img/fafafa.jpg) repeat;
+}
+.orbit>a {
+	line-height: 0;
+}
+.orbit>div {
+	width: 930px;
+	height: 100%;
+	padding: 5px;
+}
+.orbit-wrapper .timer {
+	position: absolute;
+	bottom: 10px;
+	right: 60px;
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+	opacity: .6;
+	overflow: hidden;
+	z-index: 100;
+}
+.orbit-wrapper .rotator {
+	position: absolute;
+	bottom: 0;
+	left: -20px;
+	display: block;
+	width: 40px;
+	height: 40px;
+	background: url(../img/orbit/rotator-black.png) no-repeat;
+	z-index: 3;
+}
+.orbit-wrapper .rotator.move { left: 0; }
+.orbit-wrapper .mask {
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: block;
+	width: 20px;
+	height: 40px;
+	overflow: hidden;
+	z-index: 2;
+}
+.orbit-wrapper .mask.move {
+	left: 0;
+	width: 40px;
+	background: url(../img/orbit/timer-black.png) repeat 0 0;
+}
+.orbit-wrapper .pause {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 40px;
+	height: 40px;
+	background: url(../img/orbit/pause-black.png) no-repeat;
+	opacity: 0;
+	z-index: 4;
+}
+.orbit-wrapper .pause.active { background-position: 0 -40px; }
+.orbit-wrapper .timer:hover .pause, .orbit-wrapper .pause.active { opacity: 1; }
+.orbit-wrapper .slider-nav {
+	display: block;
+}
+.orbit-wrapper .slider-nav span {
+	position: absolute;
+	bottom: 10px;
+	width: 40px;
+	height: 40px;
+	text-indent: -9999px;
+	cursor: pointer;
+	z-index: 100;
+}
+.orbit-wrapper .slider-nav span.right	{ background: url(../img/orbit/right-arrow.png) center; right: 15px; }
+.orbit-wrapper .slider-nav span.left	{ background: url(../img/orbit/left-arrow.png) center; right: 105px; }
+.orbit-wrapper .orbit-bullets {
+	position: absolute;
+	bottom: 0;
+	right: 50px;
+	list-style: none;
+	z-index: 99;
+}
+.orbit-wrapper .orbit-bullets li {
+	float: left;
+	margin-left: 5px;
+	width: 13px;
+	height: 12px;
+	background: url(../img/orbit/bullets.jpg) no-repeat 4px 0;
+	cursor: pointer;
+	color: #999;
+	text-indent: -9999px;
+	overflow: hidden;
+}
+.orbit-wrapper .orbit-bullets li.active {
+	background-position: -8px 0;
+	color: #222;
+}
+#hud {
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: block;
+	margin: 0 auto;
+	padding: 0;
+	min-width: 780px;
+	width: 100%;
+	height: 29px;
+	font: 12px/29px Helvetica,Verdana,Arial,sans-serif;
+	text-align: left;
+	text-shadow: 0 1px 0 white;
+	color: #999;
+	background: #E8D7BB;
+	border-bottom: 1px solid #BAAC96;
+	z-index: 99;
+}
+#hud h1 {
+	float: left;
+	padding: 0 10px 0 2px;
+	vertical-align: middle;
+}
+#hud ul {
+	display: block;
+	margin: 0 auto;
+	padding: 0;
+	list-style: none;
+}
+#hud ul li {
+	position: relative;
+	display: block;
+	float: left;
+	margin: 0;
+	padding: 0 5px;
+	border-left: 1px solid #CCC:
+}
+#hud ul li a {
+	color: #999;
+	text-decoration: none;
+	-webkit-transition: all .1s linear;
+}
+#hud li:hover, #hud a:hover {
+	color: #333;
+	text-shadow: none;
+}
+#hud ul li img {
+	display: inline;
+	border: none;
+	vertical-align: middle;
+}
+ul#sitemap {
+	display: table;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+ul#sitemap>li {
+	float: left;
+	display: block;
+	margin: 0;
+	padding: 0 10px 15px;
+	width: 140px;
+	height: 80px;
+}
+ul#sitemap>li>a {
+	font-weight: bold;
+}
+
+ul#sitemap * {
+	display: block;
+	color: #333;
+	text-decoration: none;
+	font-family: "MS Trebuchet",Arial,sans;
+}
+ul#sitemap h3 {
+	display: block;
+	margin: 0;
+	padding: 0 10px;
+	border-bottom: 1px groove white;
+}
+ul#sitemap ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+ul#sitemap ul li a {
+	color: #666;
+}
+ul#sitemap ul li a:hover {
+	text-decoration: underline;
+}
+ul#sitemap ul li a.current {
+	color: #333;
+}
+
+
+/* --- animations ------------------------------------------------------------------------------------------------------- */
+@-webkit-keyframes 'fadein' {
+	from	{ opacity: 0; }
+	to		{ opacity: 1; }
+}
+@-webkit-keyframes 'scrollin' {
+	0%		{ opacity: 0; bottom:  0px; -webkit-animation-timing-function: ease-out; }
+	65%		{ opacity: 0; bottom: 15px; }
+	100%	{ opacity: 1; bottom: 40px; -webkit-animation-timing-function: ease-out; }
+}
+
+
+
+
+
+
+
+body {
+	/* font-family: Georgia, serif; */
+}
+body {
+	baackground: -webkit-gradient(linear, left top, left bottom, from(#CCC), to(#DDD)); /* webkit */
+	baackground: -moz-linear-gradient(bottom,#DDD,#CCC) fixed no-repeat 0 100%; /* firefox */
+	background: #FAFAFA url(../img/fafafa.jpg) repeat;
+}
+h1, h2, h3, h4, h5 {
+	margin: 0;
+	padding: 0;
+	font-family: Georgia,serif;
+	font-weight: bold;
+}
+
+body>header {
+	background: #f5f5f5 url(../img/circle-fade.png) no-repeat  bottom;
+}
+body>header h1 {
+	background: transparent url(../img/logo_horz.min.png) no-repeat 10px bottom;
+	color: transparent;
+}
+body>header h1 a, body>header h1 a:hover {
+	color: transparent;
+}
+
+body>header nav ul li a {
+	padding: 0 30px 1px 20px;
+	color: #333;
+	font: normal 1em/28px Arial;
+	text-shadow: 0 1px 0 white;
+	background: url(../img/silk_image.png) no-repeat left;
+	-webkit-transition: color .1s linear;
+}
+body>header nav ul li a.home	{ background-image: url(../img/silk_house.png); }
+body>header nav ul li a.services{ background-image: url(../img/silk_house.png); }
+body>header nav ul li a.whyus	{ background-image: url(../img/silk_house.png); }
+body>header nav ul li a.about	{ background-image: url(../img/silk_house.png); }
+body>header nav ul li.right a {
+	float: right;
+	padding: 0 10px 1px 20px;
+	text-align: right;
+	color: #666;
+	background-image: url(../img/silk_lock.png);
+}
+body>header nav ul li a:hover {
+	text-decoration: none;
+	color: #607890;
+}
+/*#main #container {
+	-webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.5) 0 0 5px;
+	zoom: 1; progid: DXImageTransform.Microsoft.Shadow(color=#000000,direction=0,strength=7);
+}*/
+#main { -webkit-animation: 'fadein' .5s; }
+
+
+ 
+
+/* ==|== media queries ================================================================================================== *
+ * PLACEHOLDER Media Queries for Responsive Design. These override the primary ('mobile first') styles.                   *
+ * Modify as content requires.                                                                                            */
+
+@media only screen and (min-width: 480px) {
+  /* Style adjustments for viewports 480px and over go here */
+}
+@media only screen and (min-width: 768px) {
+  /* Style adjustments for viewports 768px and over go here */
+}
+
+
+
+/* ==|== print styles =================================================================================================== *
+ * Print styles. Inlined to avoid required HTTP connection (see h5bp.com/r for details)                                   */
+
+@media print {
+  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: h5bp.com/s */
+  a, a:visited { text-decoration: underline; }
+  #main a[href]:after { content: " (" attr(href) ")"; }
+  #main abbr[title]:after { content: " (" attr(title) ")"; }
+  #main .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; } /* h5bp.com/t */
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+}
