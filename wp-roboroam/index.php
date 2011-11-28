@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 
-	<article id="main" role="main">
-		<section id="content" class="clearfix">
+	<article id="main" role="main" class="clearfix">
 <?php
 
 //WP loop to display individual posts
@@ -28,8 +27,7 @@ if (have_posts()) {
 }
 
 ?>
-		</section><!-- end #content -->
 	</article><!-- end #main -->
 	<a class="scrollup" onclick="$.smoothScroll(0);">(back to top)</a>
 
-<? get_footer(); ?>
+<?php get_footer(); ?>

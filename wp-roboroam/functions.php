@@ -10,7 +10,7 @@ if(function_exists("register_sidebar")) {
 	));
 }
 
-add_custom_background();
+//add_custom_background();
 
 add_theme_support("post-thumbnails");
 set_post_thumbnail_size(212, 212); //img - box-resize (maintain aspect ratio)

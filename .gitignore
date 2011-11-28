@@ -31,3 +31,4 @@ build/config/buildinfo.properties
 intermediate
 publish
 *.project
+*.bak

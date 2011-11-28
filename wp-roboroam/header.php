@@ -24,7 +24,7 @@
 	<meta name="description" content="<?php if (is_single()) { the_excerpt(); } else {
 		bloginfo('name'); } echo " - "; bloginfo('description'); ?>" />
 	<meta name="rating" content="general">
-	<meta name="author" content="Theo Pak">
+	<meta name="author" content="<?php the_author(); ?>">
 
 	<!-- Mobile viewport optimized: j.mp/bplateviewport -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -47,6 +47,9 @@
 
 	<header>
 		<h1><a href="<?php echo home_url('/'); ?>"><?php bloginfo('name'); ?></a></h1>
+		<aside class="intro">
+			<img src="http://theopak.com/robots/wp-content/themes/wp-roboroam/img/960x360.png" />
+		</aside>
 		<nav>
 			<?php wp_nav_menu( array( 'container' => null, 'depth' => '1', 'theme_location' => 'primary' ) ); ?>
 			<!--<ul>
@@ -60,4 +63,3 @@
 	</header>
 
 	<div id="main-wrapper">
-

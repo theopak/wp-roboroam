@@ -33,26 +33,19 @@ var debugmode = false; //debugging
 
 function prepareSubpage(){
 
-	//only call this function if the document/window is ready
+	// only call this function if the document/window is ready
 	if(debugmode == true) { alert("function prepareSubpage(); called"); }
 
-	/* --- animated AJAX load for nav level 3 --------------------------------------------------------------------------- */
-/*	$('#main nav a').click(function(){
-		var resource = $(this).attr('href'); //get the resource to load
-		$('#main nav a.current').removeClass('current');
-		$('#content').hide('blind',{direction:"horizontal"},500,loadContent);
-		$(this).addClass('current');
-		function loadContent(){
-			if(debugmode == true) { alert("preparing to load resource"); } //debug
-			var nowLoading = "<img class=\"loading\" src=\"img/loading.gif\" alt=\"loading...\" />";
-			$('#content').html(nowLoading).load(resource, null, showNewContent);
-		}
-		function showNewContent() {
-			$('#content').show('blind',{direction:"horizontal"},500);
-			// make URL reflect new page
-		}
-		return false;
-	});*/
+	/* --- pad content block images so that they're consistenly sized --------------------------------------------------- */
+	$('section .third').wrap(
+		"<span style=\"width: 100%; height: 130px; margin: 0 auto; background-color: #E4E4E4; border: 1px solid #CCC; \" />"
+	);
+
+}
+
+$(document).ready(function(){
+
+	if(debugmode == true) { alert("document ready, main script.js loop started"); }
 
 	/* --- page load animation for top level ---------------------------------------------------------------------------- */
 	$('header nav ul li.page_item a').click(function(){
@@ -72,17 +65,6 @@ function prepareSubpage(){
 		$('#main nav a.current').removeClass('current');
 		$(this).addClass('current');
 	});
-
-	/* --- pad content block images so that they're consistenly sized --------------------------------------------------- */
-	$('section .third').wrap(
-		"<span style=\"width: 100%; height: 130px; margin: 0 auto; background-color: #E4E4E4; border: 1px solid #CCC; \" />"
-	);
-
-}
-
-$(document).ready(function(){
-
-	if(debugmode == true) { alert("document ready, main script.js loop started"); }
 
 	prepareSubpage(); //call this function initially and after AJAX loads
 

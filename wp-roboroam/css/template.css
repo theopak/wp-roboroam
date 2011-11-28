@@ -1,10 +1,10 @@
 /* ====================================================================================================================== *
  * === Robo Roam ======================================================================================================== *
  * ====================================================================================================================== *
- * Theme Name: Robo Roam                                                                                                  *
- * Description: a wordpress theme                                                                                         *
- * Version: 0.1                                                                                                           *
- * Author: Theo Pak                                                                                                       *
+ * = Theme Name: Robo Roam                                                                                              = *
+ * = Description: a wordpress theme                                                                                     = *
+ * = Version: 0.1                                                                                                       = *
+ * = Author: Theo Pak                                                                                                   = *
  * ====================================================================================================================== */
 
 
@@ -48,14 +48,14 @@ a.button:hover {
 	-moz-box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 5px;
 }
 
+
 /* --- header ----------------------------------------------------------------------------------------------------------- */
 body>header {
-	margin: 0 auto 45px;
-	padding: 30px 0 40px;
+	margin: 0 auto;
+	padding: 30px 0 0;
 	min-width: 780px;
+	max-width: 960px;
 	width: 100%;
-	height: 60px;
-	background: #f5f5f5 url(../img/circle-fade.png) no-repeat  bottom;
 	text-align: center;
 	z-index: 98;
 }
@@ -74,41 +74,36 @@ body>header h1 a, body>header h1 a:hover {
 	margin: 0 auto;
 	padding: 0 10px;
 	height: 100%;
+	font: 1.5em/1em Verdana;
+	text-decoration: none;
+	color: #333;
 }
-body>header nav form {
+aside.intro {
 	display: block;
-	margin: -1px auto;
+	margin: 0 auto 45px;
 	padding: 0;
-	min-width: 780px;
-	max-width: 960px;
 	width: 100%;
-	text-align: right;
+	height: 360px;
+	text-align: center;
+	overflow: hidden;
 }
-body>header nav form #s {
-	margin: 0 10px;
-	padding: 0 20px 0 0;
-	width: 130px;
-	line-height: 22px;
-	border: none;
-	background: transparent url(../img/silk_magnifier.png) no-repeat right center;
-	color: #999;
-	vertical-align: middle;
-}
-body>header nav form #searchsubmit {
-	display: none;
+aside.intro img {
+	display: inline;
+	padding: 0;
+	border: 0;
 }
 
 
 /* --- navigation ------------------------------------------------------------------------------------------------------- */
 body>header nav {
 	display: block;
-	margin: 15px auto 0;
-	padding: 0;
-	width: 100%;
+	margin: 0 auto;
+	padding: 2px 0 0;
 	height: 28px;
-	background: #E8D7BB;
-	border-top: 1px solid #BAAC96;
-	border-bottom: 1px solid #BAAC96;
+	background: #e4e4e4;
+	border: 1px solid #BAAC96;
+	border-bottom: none;
+	border-radius: 5px 5px 0 0;
 	line-height: 28px;
 	text-align: left;
 }
@@ -132,120 +127,44 @@ body>header nav ul li a {
 	float: left;
 	display: block;
 	margin: 0 0 0 10px;
-	padding: 0 10px;
+	padding: 3px 10px 0;
 	color: #333;
-	font: normal 1em/28px Arial;
+	font: normal 12pt/25px Arial;
 	text-align: left;
 	text-decoration: none;
 	cursor: pointer;
 }
-
-body>header nav li.current_page_ancestor>a, body>header nav li.current_page_item a, body>header nav li a:active {
+body>header nav li a:hover {
 	color: #607890;
 }
-#main nav {
-	position: absolute;
-	top: 0;
-	left: 0;
-	display: block;
-	margin: 0;
-	padding: 0;
-	width: 159px;
-	height: 100%;
-	text-align: left;
-	background-color: #EFEFEF;
-	border-right: 1px solid #ababab;
-}
-#main nav ul {
-	display: block;
-	margin: 0;
-	padding: 0;
-	width: 159px;
-	height: 100%;
-}
-
-#main nav ul li {
-	display: block;
-	margin: 0;
-	padding: 0;
-	width: 100%;
-}
-#main nav ul li a, #main nav ul li a:visited {
-	display: block;
-	margin: 0 -1px 0 0;
-	padding: 15px 5px 15px 20px;
-	width: 135px;
-	border-bottom: 1px solid #CCC;
-	font: 1em/1em Arial,sans;
-	text-align: left;
-	text-decoration: none;
-	text-shadow: 0 1px 0 white;
-	color: #666;
-}
-#main nav ul li a:hover {
-	color: #06e;
-}
-#main nav ul li a.current , #main nav ul li a:active {
-	font-weight: bold;
-	text-shadow: 0 1px 0 white;
-	color: #333;
-	background: #E8D7BB url(../img/main-nav-arrow.png) no-repeat right;
-	-webkit-transition: color .1s linear;
+body>header nav li.current_page_ancestor>a, body>header nav li.current_page_item a, body>header nav li a:active {
+	color: #607890;
+	text-decoration: underline;
 }
 
 
 /* --- main section ----------------------------------------------------------------------------------------------------- */
 #main-wrapper {
-	margin: 0 auto 0;
+	margin: 0 auto 1em;
+	padding: 0;
 	min-width: 780px;
 	max-width: 960px;
 	width: 100%;
+	min-height: 120px;
 }
 #main {
+	display: block;
 	margin: 0;
-	padding: 0 10px;
-	/*width: 100%;*/
-}
-#main header {
-	display: block;
-	margin: 0 0 .5em;
-	padding: 0;
-}
-#main header h1, #main header h2 {
-	display: block;
-	vertical-align: bottom;
-	clear: none;
-}
-#main header h1 {
-	margin: 110px 0 0;
-	padding: 0 20px 0 0;
-	font: bold 2.5em/1em Arial;
-	text-shadow: 0 -1px 0 #EEE;
-}
-#main header h2 {
-	margin: 0;
-	padding: 0;
-	font: italic 1em/1.5em Georgia;
-}
-#main #container {
-	position: relative;
-	display: block;
-	margin: 0 auto;
-	padding: 0;
-}
-#main #container #content {
-	display: block;
-	margin: 0 0 0 150px;
-	padding: 10px 15px 10px 25px;
-	min-height: 120px;
+	padding: 20px 15px 10px;
 	border: 1px solid #ababab;
+	border-top: 1px solid #ccc;
 	background-color: #FFF;
 }
 #main-wrapper a.scrollup {
 	display: block;
 	float: right;
 	margin: 0;
-	padding: 5px 15px;
+	padding: 5px 10px;
 	font: .8em/.8em Arial;
 	text-decoration: none;
 	color: #999;
@@ -253,24 +172,20 @@ body>header nav li.current_page_ancestor>a, body>header nav li.current_page_item
 #main-wrapper a.scrollup:hover {
 	color: #333;
 }
-#content-wrapper {
-	margin: 0;
-	padding: 0;
-}
 
 
 /* --- main section inner layout ---------------------------------------------------------------------------------------- */
-#container h3 {
+#main h3 {
 	display: block;
 	margin: 1.5em 0 .8em 0;
 	padding: 5px;
 	background-color: #E8D7BB;
 	font: bold 1.8em/1em Georgia;
 }
-#container h3:first-of-type {
+#main h3:first-of-type {
 	margin-top: 0;
 }
-#container p {
+#main p {
 	margin: 0 0 .8em;
 	padding: 0;
 }
@@ -333,7 +248,7 @@ section br {
 footer {
 	display: block;
 	margin: 3em auto 1em;
-	padding: 0 10px;
+	padding: 0 15px;
 	font: normal 1em/1em Georgia;
 	color: #666;
 }
@@ -358,9 +273,8 @@ footer h2 {
 footer .vcard {
 	position: relative;
 	margin: 0 auto .5em;
-	padding: 11px 0 11px 80px;
+	padding: 0;
 	height: 38px;
-	background: url(../img/logo_square.png) no-repeat left;
 	text-align: right;
 	line-height: 38px;
 }
@@ -670,65 +584,3 @@ ul#sitemap ul li a.current {
 	65%		{ opacity: 0; bottom: 15px; }
 	100%	{ opacity: 1; bottom: 40px; -webkit-animation-timing-function: ease-out; }
 }
-
-
-
-
-
-
-
-body {
-	/* font-family: Georgia, serif; */
-}
-body {
-	baackground: -webkit-gradient(linear, left top, left bottom, from(#CCC), to(#DDD)); /* webkit */
-	baackground: -moz-linear-gradient(bottom,#DDD,#CCC) fixed no-repeat 0 100%; /* firefox */
-	background: #FAFAFA url(../img/fafafa.jpg) repeat;
-}
-h1, h2, h3, h4, h5 {
-	margin: 0;
-	padding: 0;
-	font-family: Georgia,serif;
-	font-weight: bold;
-}
-
-body>header {
-	background: #f5f5f5 url(../img/circle-fade.png) no-repeat  bottom;
-}
-body>header h1 {
-	background: transparent url(../img/logo_horz.min.png) no-repeat 10px bottom;
-	color: transparent;
-}
-body>header h1 a, body>header h1 a:hover {
-	color: transparent;
-}
-
-body>header nav ul li a {
-	padding: 0 30px 1px 20px;
-	color: #333;
-	font: normal 1em/28px Arial;
-	text-shadow: 0 1px 0 white;
-	background: url(../img/silk_image.png) no-repeat left;
-	-webkit-transition: color .1s linear;
-}
-body>header nav ul li a.home	{ background-image: url(../img/silk_house.png); }
-body>header nav ul li a.services{ background-image: url(../img/silk_house.png); }
-body>header nav ul li a.whyus	{ background-image: url(../img/silk_house.png); }
-body>header nav ul li a.about	{ background-image: url(../img/silk_house.png); }
-body>header nav ul li.right a {
-	float: right;
-	padding: 0 10px 1px 20px;
-	text-align: right;
-	color: #666;
-	background-image: url(../img/silk_lock.png);
-}
-body>header nav ul li a:hover {
-	text-decoration: none;
-	color: #607890;
-}
-/*#main #container {
-	-webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
-	-moz-box-shadow: rgba(0, 0, 0, 0.5) 0 0 5px;
-	zoom: 1; progid: DXImageTransform.Microsoft.Shadow(color=#000000,direction=0,strength=7);
-}*/
-#main { -webkit-animation: 'fadein' .5s; }
