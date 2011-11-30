@@ -1,3 +1,13 @@
+<?php
+
+/**
+ * header.php
+ * 
+ * @package WordPress
+ * @subpackage wp-roboroam
+ */
+
+?>
 <!doctype html>
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
 <!--[if lt IE 7 ]> <html class="no-js ie6" lang="en"> <![endif]-->
@@ -48,7 +58,9 @@
 	<header>
 		<h1><a href="<?php echo home_url('/'); ?>"><?php bloginfo('name'); ?></a></h1>
 		<aside class="intro">
-			<img src="http://theopak.com/robots/wp-content/themes/wp-roboroam/img/960x360.png" />
+			<img src="http://theopak.com/robots/wp-content/themes/publish/img/banner.png" />
+			<h1>The Wumpus World</h1>
+			<p>A novel exploration of artificial intelligence, robotics engineering, and LEGO.</p>
 		</aside>
 		<nav>
 			<?php wp_nav_menu( array( 'container' => null, 'depth' => '1', 'theme_location' => 'primary' ) ); ?>

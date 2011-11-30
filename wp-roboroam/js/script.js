@@ -49,7 +49,7 @@ $(document).ready(function(){
 
 	/* --- page load animation for top level ---------------------------------------------------------------------------- */
 	$('header nav ul li.page_item a').click(function(){
-		$('#main-wrapper').hide('drop',{ direction:'down' },500);
+		$('#main').addClass('animate-fadeout');
 	});
 
 	/* --- animated PJAX load for #main>#content (https://github.com/defunkt/jquery-pjax) ------------------------------- */

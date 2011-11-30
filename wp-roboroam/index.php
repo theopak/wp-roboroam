@@ -1,26 +1,27 @@
-<?php get_header(); ?>
+<?php
+
+/**
+ * index.php
+ * 
+ * @package WordPress
+ * @subpackage wp-roboroam
+ */
+
+get_header();
+
+?>
 
 	<article id="main" role="main" class="clearfix">
 <?php
 
-//WP loop to display individual posts
+// WP loop to display individual posts
 if (have_posts()) {
 	while (have_posts()) { the_post();
-		echo "		<section id=\"post-";
-		the_ID();
-		echo "\">\n			<h1>";
-		the_title();
-		echo "</h1>\n			<small>This blog entry was posted by ";
-		echo get_the_author();
-		echo " on ";
-		the_time('l, F j, Y');
-		echo " at ";
-		the_time('g:i a ');
-		if( function_exists('ADDTOANY_SHARE_SAVE_KIT') ) { ADDTOANY_SHARE_SAVE_KIT(); }
-		edit_post_link('(admin: edit this post)', ' ', '');
-		echo "</small>\n			";
+		echo "<section id=\"post-"; the_ID(); echo "\" class=\"clearfix\">";
+		echo "<h1>"; the_title(); echo "</h1>";
+		edit_post_link('<small>(admin: edit this post)</small>', ' ', '');
 		the_content();
-		echo "\n		</section>";
+		echo "</section>";
 	}
 } else {
 	_e('Sorry, you have encountered an error.');

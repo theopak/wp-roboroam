@@ -1,4 +1,13 @@
+<?php
 
+/**
+ * footer.php
+ * 
+ * @package WordPress
+ * @subpackage wp-roboroam
+ */
+
+?>
 	<footer>
 		<section class="vcard">
 			<h1><?php bloginfo('name'); ?></h1>
@@ -20,6 +29,8 @@
 		<script src="<?php bloginfo('stylesheet_directory'); ?>/js/b353f499391bdbef271f596e7d72247b5db6aee3.js"></script>
 	<!-- end scripts-->
 
+	<?php wp_footer(); ?>
+
 	<script>
 		/*
 		window._gaq = [['_setAccount','UA-XXX'],['_trackPageview'],['_trackPageLoadTime']];
@@ -34,8 +45,6 @@
 		<script defer src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
 		<script defer>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
 	<![endif]-->
-
-	<?php wp_footer(); ?>
 
 </body>
 </html>
