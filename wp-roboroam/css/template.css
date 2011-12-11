@@ -29,6 +29,26 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'ChunkFiveRegular';
+    src: url('../fonts/Chunkfive-webfont.eot');
+    src: url('../fonts/Chunkfive-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Chunkfive-webfont.woff') format('woff'),
+         url('../fonts/Chunkfive-webfont.ttf') format('truetype'),
+         url('../fonts/Chunkfive-webfont.svg#ChunkFiveRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'JunctionRegular';
+    src: url('../fonts/Junction-webfont.eot');
+    src: url('../fonts/Junction-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Junction-webfont.woff') format('woff'),
+         url('../fonts/Junction-webfont.ttf') format('truetype'),
+         url('../fonts/Junction-webfont.svg#junctionregularRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
 
 /* --- global ----------------------------------------------------------------------------------------------------------- */
@@ -38,9 +58,9 @@ body, select, input, textarea {
 }
 html, body { height: 100%; }
 body {
-	baackground: -webkit-gradient(linear, left top, left bottom, from(#CCC), to(#DDD)); /* webkit */
-	baackground: -moz-linear-gradient(bottom,#DDD,#CCC) fixed no-repeat 0 100%; /* firefox */
-	background: #FAFAFA url(../img/fafafa.jpg) repeat;
+	background: -webkit-gradient(linear, left top, left bottom, from(#CCC), to(#DDD)); /* webkit */
+	background: -moz-linear-gradient(bottom,#DDD,#CCC) fixed no-repeat 0 100%; /* firefox */
+	background: url(../img/fafafa.jpg) repeat;
 }
 h1, h2, h3, h4, h5 {
 	margin: 0;
@@ -89,7 +109,6 @@ body>header h1 {
 	min-width: 780px;
 	max-width: 960px;
 	height: 60px;
-	line-height: 1em;
 	text-align: left;
 }
 body>header h1 a, body>header h1 a:hover {
@@ -97,7 +116,8 @@ body>header h1 a, body>header h1 a:hover {
 	margin: 0 auto;
 	padding: 0 10px;
 	height: 100%;
-	font: 1.5em/1em Verdana;
+	font: 62px/1em ChunkFiveRegular,slab-serif,serif;
+	text-shadow: 0 -1px 0 white;
 	text-decoration: none;
 	color: #333;
 }
@@ -119,21 +139,23 @@ aside.intro img {
 aside.intro h1 {
 	position: absolute;
 	top: 100px;
-	left: 400px;
+	left: 315px;
 	display: block;
 	margin: 0;
 	padding: 0;
-	font: 36px/1em HominisNormal,serif;
+	font: 56px/1em JunctionRegular,slab-serif,serif;
+	text-shadow: 0 -1px 0 white;
 	text-align: left;
 }
 aside.intro p {
 	position: absolute;
-	top: 150px;
-	left: 400px;
+	top: 160px;
+	left: 315px;
 	display: block;
 	margin: 0;
 	padding: 0;
-	font: 18px/1em HoneyScriptLight,script,sans;
+	font: 26px/1em JunctionRegular,Arial,sans;
+	text-shadow: 0 -1px 0 white;
 	text-align: left;
 }
 
@@ -144,7 +166,7 @@ body>header nav {
 	margin: 0 auto;
 	padding: 2px 0 0;
 	height: 28px;
-	background: #e4e4e4;
+	background: #e4e4e4 url(../img/zurb-overlay.png) repeat-x top;
 	border: 1px solid #BAAC96;
 	border-bottom: none;
 	border-radius: 5px 5px 0 0;
@@ -219,19 +241,51 @@ body>header nav li.current_page_ancestor>a, body>header nav li.current_page_item
 
 
 /* --- main section inner layout ---------------------------------------------------------------------------------------- */
-#main h3 {
+#main h1 {
 	display: block;
-	margin: 1.5em 0 .8em 0;
-	padding: 5px;
-	background-color: #E8D7BB;
-	font: bold 1.8em/1em Georgia;
+	margin: 1.3em 0 0;
+	font: bold 1.8em/1em JunctionRegular,Arial,sans;
 }
-#main h3:first-of-type {
+#main>h1:first-of-type {
 	margin-top: 0;
+}
+#main h3 {
+	margin: 1.5em 0 1em;
+	font: bold 1.3em/1em "Century Gothic",sans-serif;
+}
+#main h4 {
+	margin: 1em 0 .8em;
+	font: bold 1.2em/1em "Century Gothic",sans-serif;
 }
 #main p {
 	margin: 0 0 .8em;
 	padding: 0;
+	font: 16px/1.2em Verdana,sans-serif;
+}
+#main blockquote {
+	display: block;
+	margin: 5em 0 10px;
+	padding: 5px;
+	background-color: #CCC;
+}
+#main blockquote cite {
+	text-align: right;
+}
+#main pre {
+	margin: 5px 0 10px;
+	padding: 0;
+	font: 12px/20px "courier new",monospace;
+	overflow: auto;
+	overflow-y: hidden;
+}
+section br {
+	display: block;
+	float: none;
+	clear: both;
+}
+#main ul, #main ol {
+	margin: 0 0 .8em;
+	padding: 0 0 0 50px;
 }
 .full {
 	display: block;
@@ -256,14 +310,15 @@ body>header nav li.current_page_ancestor>a, body>header nav li.current_page_item
 .third {
 	width: 33%;
 }
-.full h4, .half h4, .twothird h4, .third  h4 {
-	margin: .1em .9em 1em;
-	padding: 0 0 .3em;
-	border-bottom: 1px solid #666;
+#main .full h2, #main .half h2, #main .twothird h2, #main .third  h2 {
+	margin: .1em .7em .3em;
+	padding: 0;
+	border-bottom: 1px solid #CCC;
+	font: 1.1em/1.1em "Century Gothic",sans-serif;
 	text-align: center;
 	overflow: hidden;
 }
-.full img, .half img, .twothird img, .third img {
+#main .full img, #main .half img, #main .twothird img, #main .third img {
 	display: block;
 	float: none;
 	margin: 0 auto;
@@ -272,19 +327,14 @@ body>header nav li.current_page_ancestor>a, body>header nav li.current_page_item
 	border-radius: 3px;
 	background-color: #EEE;
 }
-.half img, .third img {
+#main .half img, #main .third img {
 	padding: 0;
 	border: none;
 	border-radius: 0;
 }
-#container .full p, #container .half p, #container .twothird p, #container .third p {
+#main .full p, #main .half p, #main .twothird p, #main .third p {
 	margin: 0;
 	padding: 0 1em 1em;
-}
-section br {
-	display: block;
-	float: none;
-	clear: both;
 }
 
 
@@ -567,13 +617,14 @@ ul#sitemap ul li a.current {
 }
 #main .wp-caption {
 	margin: 10px;
-	padding: 4px 0;
+	padding: 4px 5px;
 	background-color: #f3f3f3;
 	border: 1px solid #DDD;
 	border-radius: 3px;
 	text-align: center;
 }
 #main .wp-caption img {
+	display: inline;
 	margin: 0;
 	padding: 0;
 	border: none;
@@ -585,14 +636,7 @@ ul#sitemap ul li a.current {
 }
 #main .alignleft	{ display: inline;	margin: 2px 15px 2px  0px;	float: left; }
 #main .aligncenter	{ display: block;	margin: 7px auto 2px;		float: none; }
-#main .alignright	{ display: inline;	margin: 2px  0px 2px 15px;	float: left; }
-#main pre {
-	margin: 5px 0 10px;
-	padding: 0;
-	font: 12px/20px "courier new",monospace;
-	overflow: auto;
-	overflow-y: hidden;
-}
+#main .alignright	{ display: inline;	margin: 2px  0px 2px 15px;	float: right; }
 
 
 /* --- animations ------------------------------------------------------------------------------------------------------- */
