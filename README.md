@@ -15,3 +15,4 @@
 * 2011 NOV 29 - CSS added for WP content. Custom font faces included (via fontsquirrel.com) using CSS `@font-face`. Increased conformity to WP theme standards. Explored options for custom banner. Various optimizations.
 * 2011 NOV 30 - Font faces 'ChunkFive' and 'Junction Regular' now used. Custom banner image made using Arduino controller vector art from the [Fritzing project](http://fritzing.org/) and from [this](http://nelsoncosentino.deviantart.com/gallery/?q=brain#/d252xrz) DeviantArt user.
 * 2011 DEC 10 - Added to stylesheets, fixed minor bugs.
+* 2011 DEC 11 - Version 1.0 - made final improvements to style, removed background from banner, added favicon and apple-touch-icon.png

@@ -58,19 +58,12 @@
 	<header>
 		<h1><a href="<?php echo home_url('/'); ?>"><?php bloginfo('name'); ?></a></h1>
 		<aside class="intro">
-			<img src="http://theopak.com/robots/wp-content/themes/publish/img/banner.png" />
+			<img src="<?php bloginfo('stylesheet_directory'); ?>/img/banner.png" />
 			<h1>The Wumpus World</h1>
 			<p>A novel exploration of artificial intelligence, robotics engineering, and LEGO.</p>
 		</aside>
 		<nav>
 			<?php wp_nav_menu( array( 'container' => null, 'depth' => '1', 'theme_location' => 'primary' ) ); ?>
-			<!--<ul>
-				<li class="current_page_item"	><a class="home" 		href="">Home</a></li>
-				<li	class="page_item"			><a class="services" 	href="">Our Services</a></li>
-				<li	class="page_item"			><a class="whyus" 		href="">Why Us?</a></li>
-				<li	class="page_item"			><a class="about" 		href="">About Us</a></li>
-				<li class="right"><a data-reveal-id="loginModal">login/signup</a></li>
-			</ul>-->
 		</nav>
 	</header>
 
