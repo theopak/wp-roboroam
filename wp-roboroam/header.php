@@ -40,8 +40,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
-	<link rel="shortcut icon" href="/favicon.ico">
-	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+	<link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/favicon.ico">
+	<link rel="apple-touch-icon" href="<?php bloginfo('stylesheet_directory'); ?>/apple-touch-icon.png">
 
 	<!-- CSS: implied media=all -->
 	<!-- CSS concatenated and minified via ant build script-->
@@ -57,13 +57,13 @@
 
 	<header>
 		<h1><a href="<?php echo home_url('/'); ?>"><?php bloginfo('name'); ?></a></h1>
-		<aside class="intro">
-			<img src="<?php bloginfo('stylesheet_directory'); ?>/img/banner.png" />
+		<aside class="intro" style="background-image:url("<?php header_image(); ?>);">
+			<!--<img src="<?php bloginfo('stylesheet_directory'); ?>/img/banner.png" />-->
 			<h1>The Wumpus World</h1>
 			<p>A novel exploration of artificial intelligence, robotics engineering, and LEGO.</p>
 		</aside>
 		<nav>
-			<?php wp_nav_menu( array( 'container' => null, 'depth' => '1', 'theme_location' => 'primary' ) ); ?>
+			<?php wp_nav_menu( array( 'container' => 'false', 'depth' => '1', 'theme_location' => 'primary' ) ); ?>
 		</nav>
 	</header>
 

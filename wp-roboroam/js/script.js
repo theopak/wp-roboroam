@@ -31,18 +31,6 @@ var debugmode = false; //debugging
 
 /* Author: Theo Pak (http://theopak.com) ================================================================================ */
 
-function prepareSubpage(){
-
-	// only call this function if the document/window is ready
-	if(debugmode == true) { alert("function prepareSubpage(); called"); }
-
-	/* --- pad content block images so that they're consistenly sized --------------------------------------------------- */
-	$('section .third').wrap(
-		"<span style=\"width: 100%; height: 130px; margin: 0 auto; background-color: #E4E4E4; border: 1px solid #CCC; \" />"
-	);
-
-}
-
 $(document).ready(function(){
 
 	if(debugmode == true) { alert("document ready, main script.js loop started"); }
@@ -51,21 +39,5 @@ $(document).ready(function(){
 	$('header nav ul li.page_item a').click(function(){
 		$('#main').addClass('animate-fadeout');
 	});
-
-	/* --- animated PJAX load for #main>#content (https://github.com/defunkt/jquery-pjax) ------------------------------- */
-	$('#main nav a').pjax('#main #content');
-	$('#main #content').bind('pjax:start',	function(){
-		$('#content-wrapper').hide('fade',500);
-		//var nowLoading = "<img class=\"loading\" src=\"img/loading.gif\" alt=\"loading...\" />";
-		//$('#content').html(nowLoading);
-	}).bind('pjax:end',	function(){
-		$('#content-wrapper').show('drop',{direction:'right'},500)
-	});
-	$('#main nav a').click(function(){
-		$('#main nav a.current').removeClass('current');
-		$(this).addClass('current');
-	});
-
-	prepareSubpage(); //call this function initially and after AJAX loads
 
 });
